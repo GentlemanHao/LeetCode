@@ -12,15 +12,14 @@ fun isValid(s: String): Boolean {
 
     val stack = Stack<Char>()
     s.forEach { c ->
+        if (c == ' ') return@forEach
         if (map.containsKey(c)) {
             if (stack.isEmpty() || stack.peek() != map[c]) {
                 return false
             }
             stack.pop()
         } else {
-            if (c != ' ') {
-                stack.push(c)
-            }
+            stack.push(c)
         }
     }
 
