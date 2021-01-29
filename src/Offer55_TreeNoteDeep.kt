@@ -1,3 +1,4 @@
+import bean.TreeNode
 import java.util.*
 
 fun main() {
@@ -100,6 +101,3 @@ fun isBalanced(root: TreeNode?): Boolean {
 
     return Math.abs(left - right) <= 1
 }
-
-
-class TreeNode(val value: Int, var left: TreeNode? = null, var right: TreeNode? = null)
